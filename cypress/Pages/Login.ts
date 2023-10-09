@@ -9,7 +9,7 @@ export class LOGIN{
        Txt_Btn_CerrarSession= 'Cerrar sesión'
 
 
-       INGRESAR_label(){cy.contains(this.ingresar_label).click();}
+       INGRESAR_label(){cy.contains(this.ingresar_label,{timeout:5000}).click();}
        URL_HOMEPAGE(){cy.url().should("include",this.Url_homepage);}
        email(correo){cy.get(this.input_email).type(correo);}
        password(contraseña){cy.get(this.input_password).type(contraseña);}
