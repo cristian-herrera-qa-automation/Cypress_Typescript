@@ -15,7 +15,7 @@ describe('Verify Product quantity in Cart', () => {
       cy.visit('https://www.elauditor.com.ar')
       cy.clearAllCookies();
       cy.url().should("include","elauditor.com.ar",{timeout:5000})
-     // cy.CERRAR_POP_UP();
+      cy.CERRAR_POP_UP();
       elements_pages.Acceder_Resmas();
       elements_PLP.product().first().click({force:true});
       elements_PDP.Quantity().within(()=>{

@@ -9,7 +9,7 @@ export class POP_UP{
 
         INPUT_EMAIL(correo){return cy.get(this.input_email).type(correo)}
         BTN_SUSCRIPCION(){return cy.contains(this.btn_suscribirme).click();}
-        Message_Success(){return cy.get(this.Class_success_message)}
+        Message_Success(){return cy.get(this.Class_success_message,{timeout:6000})}
         Cerrar_Pop_up(){return cy.get(this.ID_cerrar_pop_up).click();}
         
         };

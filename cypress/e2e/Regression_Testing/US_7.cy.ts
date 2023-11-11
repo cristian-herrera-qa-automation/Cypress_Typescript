@@ -9,7 +9,7 @@ describe('Verify the list of products in the Resmas category and the product det
     beforeEach(() => {
       cy.visit('https://www.elauditor.com.ar')
       cy.url().should("include","elauditor.com.ar",{timeout:5000})
-     // cy.CERRAR_POP_UP();
+      cy.CERRAR_POP_UP();
     });
    
     it('Verificar que la lista de productos RESMAS esta visible.', () => {

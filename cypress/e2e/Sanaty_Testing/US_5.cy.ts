@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 import { POP_UP } from "../../Pages/Pop_Up";
 
-describe.skip('Suscription NewsLetter on Pop-Up', () => {
+describe('Suscription NewsLetter on Pop-Up', () => {
     const elements_pop_up= new POP_UP(); 
     beforeEach(() => {
       cy.visit('https://www.elauditor.com.ar')
@@ -12,7 +12,7 @@ describe.skip('Suscription NewsLetter on Pop-Up', () => {
         const randomEmail = Math.random().toString(20).substring(2,20)+"@gmail.com";
         elements_pop_up.INPUT_EMAIL(randomEmail).should("exist");
         elements_pop_up.BTN_SUSCRIPCION();
-        elements_pop_up.Message_Success().contains("p",'Gracias por suscribirte a nuestro Newsletter!');
+        elements_pop_up.Message_Success().contains('Gracias por suscribirte a nuestro Newsletter!');
         elements_pop_up.Cerrar_Pop_up();
     });
 });
