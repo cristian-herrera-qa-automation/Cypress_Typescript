@@ -8,7 +8,7 @@ describe('Logout User', () => {
     beforeEach(() => {
       cy.visit('https://www.elauditor.com.ar')
       cy.url().should("include","elauditor.com.ar",{timeout:5000})
-     // cy.CERRAR_POP_UP();
+      cy.CERRAR_POP_UP();
     });
     it('Intentar registrarse con email existente', () => {
         elements_register.acceder_registrarse();
